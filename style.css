@@ -1,0 +1,7 @@
+.accordion-button {
+    color: black; /* Cambiar color del texto del acordeón */
+}
+
+.accordion-button:not(.collapsed) {
+    color: rgb(0, 0, 0); /* Cambiar color cuando el acordeón está abierto */
+}
