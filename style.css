@@ -13,3 +13,70 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Keeps the image fixed while scrolling */
 }
+    .custom-co2-btn {
+        background-color: #26699D;
+        border-color: #26699D;
+        border-radius: 50px; /* Bordes redondeados */
+        color: white;
+    }
+
+    .custom-co2-btn:hover {
+        background-color: #1f5a89; /* Color más oscuro al pasar el mouse */
+        border-color: #1f5a89;
+    }
+
+    .custom-accordion .accordion-item {
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        background-color: #26699D;
+    }
+
+    .custom-accordion-btn {
+        background-color: #26699D;
+        color: white;
+        font-weight: bold;
+        border-radius: 20px;
+    }
+
+    .custom-accordion-btn:not(.collapsed) {
+        color: white;
+        background-color: #1f5a89;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+    }
+
+    .custom-accordion-body {
+        background-color: #f8f9fa;
+        color: #000;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+
+    .list-group-item {
+        border: none;
+    }
+
+    .list-group-item a {
+        color: #26699D;
+        font-weight: 500;
+    }
+
+    .list-group-item:hover {
+        background-color: #e6f0f8;
+    }
+    /* Hide default Bootstrap accordion arrow */
+.accordion-button::after {
+    display: none;
+}
+
+/* Style for your custom icon */
+.accordion-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    cursor: pointer;
+}

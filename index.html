@@ -61,15 +61,17 @@
     <div class="container text-center mt-3">
     </div>
     <div class="container mt-4">
-        <div class="accordion" id="dailyProgramme">
+        <div class="accordion custom-accordion" id="dailyProgramme">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        Daily Programme
+                <h2 class="accordion-header">
+                    <button class="accordion-button custom-accordion-btn d-flex justify-content-between align-items-center w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <span>Daily Programme</span>
+                        <img src="menu_botton-removebg-preview.png" alt="Toggle Icon" class="accordion-icon">
                     </button>
                 </h2>
+                           
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#dailyProgramme">
-                    <div class="accordion-body">
+                    <div class="accordion-body custom-accordion-body">
                         <ul class="list-group">
                             <li class="list-group-item"><a href="day/day1.html" class="text-decoration-none">Day 1</a></li>
                             <li class="list-group-item"><a href="day/day2.html" class="text-decoration-none">Day 2</a></li>
@@ -85,6 +87,7 @@
             </div>
         </div>
     </div>
+    
     
     
     
@@ -109,9 +112,9 @@
             });
         }
     </script>
-    <div class="d-flex justify-content-center mt-4">
-        <a href="CO2/CO2.html" class="btn btn-dark btn-lg">My CO₂ Emissions</a>
-    </div>    
+   <div class="d-flex justify-content-center mt-4">
+    <a href="CO2/CO2.html" class="btn btn-lg custom-co2-btn">My CO₂ Emissions</a>
+</div>  
 
 
     <div class="container">
@@ -136,6 +139,6 @@
             }
         });
     </script>
-    <br><br><br><br><br><br><br>
+    <br><br><br><br><br>
 </body>
 </html>
