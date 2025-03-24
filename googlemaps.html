@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mapa con GPS en tiempo real</title>
+    <style>
+      #map {
+        height: 100vh;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <br><br><br>
+    <div id="map"></div>
+
+    <script>
+      let map;
+      let userMarker;
+
+      function initMap() {
+        // Mapa centrado en una ubicación inicial cualquiera (se actualizará luego)
+        const initialPos = { lat: -33.45, lng: -70.6667 }; // Santiago como ejemplo
+
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: initialPos,
+          zoom: 17,
+        });
+
+        userMarker = new google.maps.Marker({
+          position: initialPos,
+          map: map,
+          title: "Tu ubicación",
+          icon: {
+            url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+          }
+        });
+
+        // Geolocalización en tiempo real
+        if (navigator.geolocation) {
+          navigator.geolocation.watchPosition(
+            (position) => {
+              const pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              };
+              userMarker.setPosition(pos);
+              map.setCenter(pos);
+            },
+            (error) => {
+              alert("Error al obtener la ubicación: " + error.message);
+            }
+          );
+        } else {
+          alert("Tu navegador no soporta geolocalización.");
+        }
+      }
+    </script>
+
+    <!-- Reemplaza TU_API_KEY con tu clave real de Google Maps JavaScript API -->
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1GV0qHbav_DAKAdTlvbAaS0OOEEVXlls&callback=initMap">
+    </script>
+  </body>
+</html>
