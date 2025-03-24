@@ -12,13 +12,21 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<style>.fixed-bottom-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensures it's above other elements */
+}
+</style>
 <body class="bg-dark text-light">
     <div class="container mt-4">
         <h2 class="text-center">Select Your School to See CO₂ Emissions</h2>
-        
         <div class="accordion" id="co2Accordion">
             <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h2 class="accordion-header d-flex align-items-center">
+                    <img src="canada.png" alt="Canada Flag" class="me-2" style="width: 30px; height: 20px;">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#canada">Canada</button>
                 </h2>
                 <div id="canada" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
@@ -31,98 +39,138 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#usa">USA</button>
-                </h2>
-                <div id="usa" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li onclick="showData('Cate School')">Cate School</li>
-                            <li onclick="showData('Palmer Trinity School')">Palmer Trinity School</li>
-                        </ul>
+            <div class="accordion" id="co2Accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header d-flex align-items-center">
+                        <img src="download.png" alt="USA Flag" class="me-2" style="width: 30px; height: 20px;">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#usa">USA</button>
+                    </h2>
+                    <div id="usa" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li onclick="showData('Cate School')">Cate School</li>
+                                <li onclick="showData('Palmer Trinity School')">Palmer Trinity School</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#india">India</button>
-                </h2>
-                <div id="india" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li onclick="showData('Vivek High School')">Vivek High School</li>
-                            <li onclick="showData('Penryn College')">Penryn College</li>
-                        </ul>
+            
+                <div class="accordion-item">
+                    <h2 class="accordion-header d-flex align-items-center">
+                        <img src="india.png" alt="India Flag" class="me-2" style="width: 30px; height: 20px;">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#india">India</button>
+                    </h2>
+                    <div id="india" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li onclick="showData('Vivek High School')">Vivek High School</li>
+                                <li onclick="showData('Penryn College')">Penryn College</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#romania">Romania</button>
-                </h2>
-                <div id="romania" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li onclick="showData('Paradis International College')">Paradis International College</li>
-                        </ul>
+            
+                <div class="accordion-item">
+                    <h2 class="accordion-header d-flex align-items-center">
+                        <img src="romania.png" alt="Romania Flag" class="me-2" style="width: 30px; height: 20px;">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#romania">Romania</button>
+                    </h2>
+                    <div id="romania" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li onclick="showData('Paradis International College')">Paradis International College</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="accordion-item">
+                    <h2 class="accordion-header d-flex align-items-center">
+                        <img src="germany.png" alt="Germany Flag" class="me-2" style="width: 30px; height: 20px;">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#germany">Germany</button>
+                    </h2>
+                    <div id="germany" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li onclick="showData('Stiftung Louisenlund')">Stiftung Louisenlund</li>
+                                <li onclick="showData('Klosterschule Roßleben')">Klosterschule Roßleben</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="accordion-item">
+                    <h2 class="accordion-header d-flex align-items-center">
+                        <img src="peru.png" alt="Peru Flag" class="me-2" style="width: 30px; height: 20px;">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#peru">Perú</button>
+                    </h2>
+                    <div id="peru" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li onclick="showData('Markham College')">Markham College</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="accordion-item">
+                    <h2 class="accordion-header d-flex align-items-center">
+                        <img src="Argentina.png" alt="Argentina Flag" class="me-2" style="width: 30px; height: 20px;">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#argentina">Argentina</button>
+                    </h2>
+                    <div id="argentina" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li onclick="showData('Michael Ham Memorial College')">Michael Ham Memorial College</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#germany">Germany</button>
-                </h2>
-                <div id="germany" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li onclick="showData('Stiftung Louisenlund')">Stiftung Louisenlund</li>
-                            <li onclick="showData('Klosterschule Roßleben')">Klosterschule Roßleben</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#peru">Peru</button>
-                </h2>
-                <div id="peru" class="accordion-collapse collapse" data-bs-parent="#co2Accordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li onclick="showData('Markham College')">Markham College</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <div id="schoolData" class="mt-4"></div>
     </div>
     
     <script>
         const schoolEmissions = {
-            "Appleby College": "Trees you need to plant:<br>2.614 Espinos<br>0.052 Quillayes<br>Your whole team needs to plant:<br>15.03 Espinos<br>0.30 Quillayes",
-            "St. Mildred's-Lightbourn School": "Trees you need to plant:<br>2.610 Espinos<br>0.052 Quillayes<br>Your whole team needs to plant:<br>35.98 Espinos<br>0.72 Quillayes",
-            "Cate School": "Trees you need to plant:<br>2.407 Espinos<br>0.048 Quillayes<br>Your whole team needs to plant:<br>22.12 Espinos<br>0.44 Quillayes",
-            "Palmer Trinity School": "Trees you need to plant:<br>2.094 Espinos<br>0.042 Quillayes<br>Your whole team needs to plant:<br>21.63 Espinos<br>0.43 Quillayes",
-            "Vivek High School": "Trees you need to plant:<br>4.266 Espinos<br>0.085 Quillayes<br>Your whole team needs to plant:<br>34.32 Espinos<br>0.69 Quillayes",
-            "Stiftung Louisenlund": "Trees you need to plant:<br>3.787 Espinos<br>0.076 Quillayes<br>Your whole team needs to plant:<br>30.43 Espinos<br>0.61 Quillayes",
-            "Klosterschule Roßleben": "Trees you need to plant:<br>3.913 Espinos<br>0.078 Quillayes<br>Your whole team needs to plant:<br>13.48 Espinos<br>0.27 Quillayes",
-            "Markham College": "Trees you need to plant:<br>0.732 Espinos<br>0.015 Quillayes<br>Your whole team needs to plant:<br>6.65 Espinos<br>0.14 Quillayes",
-            "St. Clement's School": "Trees you need to plant:<br>2.584 Espinos<br>0.052 Quillayes<br>Your whole team needs to plant:<br>17.82 Espinos<br>0.36 Quillayes",
-            "Penryn College": "Trees you need to plant:<br>3.540 Espinos<br>0.071 Quillayes<br>Your whole team needs to plant:<br>24.41 Espinos<br>0.49 Quillayes",
-            "Paradis International College": "Trees you need to plant:<br>4.010 Espinos<br>0.080 Quillayes<br>Your whole team needs to plant:<br>46.05 Espinos<br>0.30 Quillayes"
+            "Appleby College": "Trees you need to plant:<br>2.614 Espinos<br>Or<br>0.052 Quillayes<br>Your whole team needs to plant:<br>15.03 Espinos<br>Or<br>0.30 Quillayes",
+            "St. Mildred's-Lightbourn School": "Trees you need to plant:<br>2.610 Espinos<br>Or<br>0.052 Quillayes<br>Your whole team needs to plant:<br>35.98 Espinos<br>Or<br>0.72 Quillayes",
+            "Cate School": "Trees you need to plant:<br>2.407 Espinos<br>Or<br>0.048 Quillayes<br>Your whole team needs to plant:<br>22.12 Espinos<br>Or<br>0.44 Quillayes",
+            "Palmer Trinity School": "Trees you need to plant:<br>2.094 Espinos<br>Or<br>0.042 Quillayes<br>Your whole team needs to plant:<br>21.63 Espinos<br>Or<br>0.43 Quillayes",
+            "Vivek High School": "Trees you need to plant:<br>4.266 Espinos<br>Or<br>0.085 Quillayes<br>Your whole team needs to plant:<br>34.32 Espinos<br>Or<br>0.69 Quillayes",
+            "Stiftung Louisenlund": "Trees you need to plant:<br>3.787 Espinos<br>Or<br>0.076 Quillayes<br>Your whole team needs to plant:<br>30.43 Espinos<br>Or<br>0.61 Quillayes",
+            "Klosterschule Roßleben": "Trees you need to plant:<br>3.913 Espinos<br>Or<br>0.078 Quillayes<br>Your whole team needs to plant:<br>13.48 Espinos<br>Or<br>0.27 Quillayes",
+            "Markham College": "Trees you need to plant:<br>0.732 Espinos<br>Or<br>0.015 Quillayes<br>Your whole team needs to plant:<br>6.65 Espinos<br>Or<br>0.14 Quillayes",
+            "St. Clement's School": "Trees you need to plant:<br>2.584 Espinos<br>Or<br>0.052 Quillayes<br>Your whole team needs to plant:<br>17.82 Espinos<br>Or<br>0.36 Quillayes",
+            "Penryn College": "Trees you need to plant:<br>3.540 Espinos<br>Or<br>0.071 Quillayes<br>Your whole team needs to plant:<br>24.41 Espinos<br>Or<br>0.49 Quillayes",
+            "Paradis International College": "Trees you need to plant:<br>4.010 Espinos<br>Or<br>0.080 Quillayes<br>Your whole team needs to plant:<br>46.05 Espinos<br>Or<br>0.92 Quillayes",
+            "Michael Ham Memorial College": "Trees you need to plant:<br>0.390 Espinos<br>Or<br>0.008 Quillayes<br>Your whole team needs to plant:<br>3.58 Espinos<br>Or<br>0.07 Quillayes"
         };
         
         function showData(school) {
             document.getElementById('schoolData').innerHTML = `<h3>${school}</h3><p>${schoolEmissions[school]}</p>`;
         }
+        
+        function showData(school) {
+            document.getElementById('schoolData').innerHTML = `<h3>${school}</h3><p>${schoolEmissions[school]}</p>
+            
+            <h4>Espinos Description:</h4>
+<p>Espinos are an exceptional choice due to their remarkable adaptability to extreme environmental conditions. They can thrive in a wide range of temperatures, from as low as -8°C to as high as 36°C, making them highly resilient to both cold and heat. Additionally, they can survive in regions with minimal rainfall, tolerating droughts and growing in areas where annual precipitation can be as low as 28 mm. This makes them an ideal species for arid and semi-arid regions where other trees would struggle to survive. Their ability to persist under such harsh conditions ensures long-term growth with minimal water resources, making them a sustainable option for reforestation and land restoration efforts.</p>
+
+<img src="espino.jpg" alt="Espino Tree" width="400">
+
+<h4>Quillay Description:</h4>
+<p>Quillay, on the other hand, is known for its ability to thrive in poor soil conditions where other species would find it difficult to grow. It can survive in harsh climates, making it an excellent option for degraded landscapes. One of its most valuable characteristics is its ability to regenerate after being cut, ensuring continuous growth and making it a sustainable resource for various uses. Additionally, Quillay has a strong resistance to wildfires, allowing it to recover quickly and continue growing even after fire damage. This resilience makes it particularly useful for reforestation in fire-prone areas and for stabilizing ecosystems that are frequently exposed to environmental stressors.</p>
+
+<img src="quillayes.jpeg" alt="Quillay Tree" width="400">
+`;
+        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <div class="text-center mt-4">
-        <button class="btn btn-secondary" onclick="window.history.back()">Back</button>
-    </div>
+    <div class="text-center">
+        <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
+    </div>    
 </body>
 </html>
