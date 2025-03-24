@@ -30,6 +30,23 @@
             width: 100%;
         }
     </style>
+    <style>
+        #credits-footer {
+            position: relative; /* Ahora es relativo al contenido, no fijo */
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            text-align: right;
+            padding-right: 1rem;
+            opacity: 0; /* Oculto al inicio */
+            transition: opacity 0.5s ease-in-out;
+        }
+    
+        /* Cuando el usuario baja lo suficiente, el botón aparece */
+        .show-footer {
+            opacity: 1 !important;
+        }
+    </style>
 </head>
 
 <body> 
@@ -97,10 +114,28 @@
     </div>    
 
 
-    <div class="position-fixed bottom-0 end-0 p-3">
-        <a href="credit.html" class="btn btn-dark btn-sm">Credits</a>
-    </div>
-    <br><br><br><br><br><br><br>
+    <div class="container">
+        <!-- Todo el contenido de tu página aquí -->
     
+        <div class="text-end p-3" id="credits-footer">
+            <a href="credit.html" class="btn btn-dark btn-sm">Credits</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("scroll", function () {
+            let footer = document.getElementById("credits-footer");
+            let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            let totalHeight = document.documentElement.scrollHeight;
+            let windowHeight = window.innerHeight;
+    
+            // Si el usuario ha bajado más de la mitad de la página, mostrar botón
+            if (scrollPosition > totalHeight - windowHeight - 100) { 
+                footer.classList.add("show-footer");
+            } else {
+                footer.classList.remove("show-footer");
+            }
+        });
+    </script>
+    <br><br><br><br><br><br><br>
 </body>
 </html>
