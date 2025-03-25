@@ -4,14 +4,19 @@
     <meta charset="utf-8" />
     <title>Mapa con GPS en tiempo real</title>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
       #map {
         height: 100vh;
-        width: 100%;
+        width: 70%;
       }
     </style>
   </head>
   <body>
-    <br><br><br>
     <div id="map"></div>
 
     <script>
@@ -19,12 +24,12 @@
       let userMarker;
 
       function initMap() {
-        // Mapa centrado en una ubicación inicial cualquiera (se actualizará luego)
-        const initialPos = { lat: -33.45, lng: -70.6667 }; // Santiago como ejemplo
+        const initialPos = { lat: -33.317778, lng: -70.576389 };
 
         map = new google.maps.Map(document.getElementById("map"), {
           center: initialPos,
-          zoom: 17,
+          zoom: 18,
+          mapTypeId: 'satellite'
         });
 
         userMarker = new google.maps.Marker({
@@ -36,7 +41,6 @@
           }
         });
 
-        // Geolocalización en tiempo real
         if (navigator.geolocation) {
           navigator.geolocation.watchPosition(
             (position) => {
@@ -54,10 +58,49 @@
         } else {
           alert("Tu navegador no soporta geolocalización.");
         }
+
+        // 🔽 Marcadores personalizados con InfoWindows
+        const locations = [
+          {
+            position: { lat: -33.317778, lng: -70.576389 },
+            title: "Gym",
+            info: "Meeting point"
+          },
+          {
+            position: { lat: -33.318056, lng: -70.576944 },
+            title: "P6",
+            info: ""
+          },
+          {
+            position: { lat: -33.318611, lng: -70.5775 },
+            title: "P7",
+            info: ""
+          },
+          {
+            position: { lat: -33.319444, lng: -70.578333 },
+            title: "Dining hall",
+            info: ""
+          }
+        ];
+
+        locations.forEach(loc => {
+          const marker = new google.maps.Marker({
+            position: loc.position,
+            map: map,
+            title: loc.title
+          });
+
+          const infoWindow = new google.maps.InfoWindow({
+            content: `<strong>${loc.title}</strong><br>${loc.info}`
+          });
+
+          marker.addListener("click", () => {
+            infoWindow.open(map, marker);
+          });
+        });
       }
     </script>
 
-    <!-- Reemplaza TU_API_KEY con tu clave real de Google Maps JavaScript API -->
     <script async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1GV0qHbav_DAKAdTlvbAaS0OOEEVXlls&callback=initMap">
     </script>
