@@ -1,52 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Day 1: Welcome</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .fixed-bottom-button {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+    }
+
+    .full-image {
+      display: block;
+      width: auto;
+      height: 100vh;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .full-image {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
 <body>
-    <body style="
-    background-image: url(img/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-">
-
-  <div class="container mt-4">
-    <h1 class="text-center">Day 1 – April 2: Welcome</h1>
-    <div class="table-responsive">
-      <table class="table table-bordered">
-        <thead class="table-dark">
-          <tr><th>Time</th><th>Activity</th><th>Venue</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>6:00</td><td>Airport transfer to Craighouse school</td><td>Airport</td></tr>
-          <tr><td>6:30 - 12:00</td><td>Delegations start arriving to school</td><td>Fields</td></tr>
-          <tr><td>11:00</td><td>Snack</td><td>School gym - outer patio</td></tr>
-          <tr><td>11:00</td><td>Interactive activities to connect and get to know each other</td><td>School gym</td></tr>
-          <tr><td>12:00</td><td>School Tour for Group 1</td><td>School</td></tr>
-          <tr><td>13:25</td><td>Lunch Break</td><td>School Canteen</td></tr>
-          <tr><td>14:30</td><td>School Tour Group 2</td><td>School</td></tr>
-          <tr><td>15:30</td><td>Interactive activities – Game show</td><td>School gym</td></tr>
-          <tr><td>16:30</td><td>Students head home with their hosts</td><td>Gym entrance</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="text-center">
-      <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
-    </div>
-  </div>
+  <img src="Day1.png.png" alt="Day 1 Info" class="full-image">
 </body>
 </html>
