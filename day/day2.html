@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Day 2 – Opening and Internationalism</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
-      padding: 2rem;
+      padding: 0;
       background: white;
       font-family: Arial, sans-serif;
       position: relative;
@@ -15,14 +16,15 @@
     .container {
       max-width: 850px;
       margin: auto;
+      padding: 2rem 2rem 2rem 4rem;
       position: relative;
       z-index: 1;
     }
 
     .logo-placeholder {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 1rem;
+      right: 1rem;
       width: 70px;
       height: 70px;
       background-color: #ccc;
@@ -45,6 +47,10 @@
       font-style: italic;
       color: #002b64;
       margin-bottom: 2rem;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
     }
 
     table {
@@ -110,32 +116,51 @@
       background-color: #54b948;
       z-index: -1;
     }
-  </style>
-   <style>.fixed-bottom-button {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #54b948;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    z-index: 9999;
-    transition: background-color 0.3s ease;
-  }
-  .fixed-bottom-button:hover {
-    background-color: #489e2e; /* un poco más oscuro al pasar el mouse */
-  }
+
+    .fixed-bottom-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #54b948;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+    }
+
+    .fixed-bottom-button:hover {
+      background-color: #489e2e;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem 1rem 2rem 3.5rem;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="left-border"></div>
-
   <div class="container">
     <img src="ConferenceLogo.jpg" alt="RS Logo" class="logo-placeholder">
 
@@ -145,31 +170,33 @@
 
     <div class="background-llama-placeholder"></div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Activity</th>
-          <th>Venue</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>7:30</td><td>Delegate transfer to school</td><td>Gym area</td></tr>
-        <tr><td>8:20</td><td>Students arrive to school</td><td>Gym area</td></tr>
-        <tr><td>8:40</td><td>Round Square Conference inauguration ceremony</td><td>School gym</td></tr>
-        <tr><td>10:20</td><td>Coffee Break</td><td>School gym</td></tr>
-        <tr><td>11:20</td><td>Baraza Groups</td><td>School gym</td></tr>
-        <tr><td>11:45</td><td>Local Culture Exhibition</td><td>School gym</td></tr>
-        <tr><td>13:25</td><td>Lunch break</td><td>School canteen</td></tr>
-        <tr><td>14:25</td><td>Chilean Cultural Fair</td><td>School gym</td></tr>
-        <tr><td>15:30</td><td>Dance Practice</td><td>School courts</td></tr>
-        <tr><td>16:00</td><td>Snack</td><td>School gym</td></tr>
-        <tr><td>16:30</td><td>Cultural Night</td><td>School gym</td></tr>
-        <tr><td>18:00</td><td>Informative meeting for Democracy day</td><td>School gym</td></tr>
-        <tr><td>18:15</td><td>Students head home with their hosts / Delegates head to restaurant</td><td>Malakita Restaurant</td></tr>
-        <tr><td>20:00</td><td>Delegates transfer back to hotel</td><td>Restaurant/Hotel</td></tr>
-      </tbody>
-    </table>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>7:30</td><td>Delegate transfer to school</td><td>Gym area</td></tr>
+          <tr><td>8:20</td><td>Students arrive to school</td><td>Gym area</td></tr>
+          <tr><td>8:40</td><td>Round Square Conference inauguration ceremony</td><td>School gym</td></tr>
+          <tr><td>10:20</td><td>Coffee Break</td><td>School gym</td></tr>
+          <tr><td>11:20</td><td>Baraza Groups</td><td>School gym</td></tr>
+          <tr><td>11:45</td><td>Local Culture Exhibition</td><td>School gym</td></tr>
+          <tr><td>13:25</td><td>Lunch break</td><td>School canteen</td></tr>
+          <tr><td>14:25</td><td>Chilean Cultural Fair</td><td>School gym</td></tr>
+          <tr><td>15:30</td><td>Dance Practice</td><td>School courts</td></tr>
+          <tr><td>16:00</td><td>Snack</td><td>School gym</td></tr>
+          <tr><td>16:30</td><td>Cultural Night</td><td>School gym</td></tr>
+          <tr><td>18:00</td><td>Informative meeting for Democracy day</td><td>School gym</td></tr>
+          <tr><td>18:15</td><td>Students head home with their hosts / Delegates head to restaurant</td><td>Malakita Restaurant</td></tr>
+          <tr><td>20:00</td><td>Delegates transfer back to hotel</td><td>Restaurant/Hotel</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="reminder-box">
       <div class="reminder-title">DON'T FORGET</div>
@@ -180,8 +207,9 @@
       </ul>
     </div>
   </div>
+
   <div class="text-center">
     <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
-  </div>  
+  </div>
 </body>
 </html>
