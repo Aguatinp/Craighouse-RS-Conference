@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Day 1 – Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -48,6 +49,10 @@
       margin-bottom: 2rem;
     }
 
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -86,28 +91,47 @@
       background-color: #e96592;
       z-index: -1;
     }
-  </style>
-  <style>.fixed-bottom-button {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #e96592;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    z-index: 9999;
-    transition: background-color 0.3s ease;
-  }
-  
-  .fixed-bottom-button:hover {
-    background-color: #d24f7e; /* un poco más oscuro al pasar el mouse */
-  }
+
+    .fixed-bottom-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #e96592;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+    }
+
+    .fixed-bottom-button:hover {
+      background-color: #d24f7e;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -117,32 +141,34 @@
     <h1 class="title">DAY 1<br>WELCOME</h1>
     <p class="subtitle">WEDNESDAY APRIL 2ND</p>
 
-    <div class="img/ConferenceLogo.jpg"></div>
+    <div class="background-eagle-placeholder"></div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Activity</th>
-          <th>Venue</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>6:00</td><td>Airport transfer to Craighouse school</td><td>Airport</td></tr>
-        <tr><td>6:30–12:00</td><td>Delegations start arriving to school</td><td>Gym area</td></tr>
-        <tr><td>11:00</td><td>Snack</td><td>School gym – outer patio</td></tr>
-        <tr><td>11:30</td><td>Interactive activities to connect and get to know each other</td><td>School gym</td></tr>
-        <tr><td>12:30</td><td>School Tour for Group 1</td><td>School</td></tr>
-        <tr><td>13:25</td><td>Lunch Break</td><td>School Canteen</td></tr>
-        <tr><td>14:30</td><td>School Tour Group 2</td><td>School</td></tr>
-        <tr><td>15:30</td><td>Interactive activities to connect and get to know each other</td><td>School gym</td></tr>
-        <tr><td>16:30</td><td>Students head home with their hosts</td><td>School gym</td></tr>
-      </tbody>
-    </table>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>6:00</td><td>Airport transfer to Craighouse school</td><td>Airport</td></tr>
+          <tr><td>6:30–12:00</td><td>Delegations start arriving to school</td><td>Gym area</td></tr>
+          <tr><td>11:00</td><td>Snack</td><td>School gym – outer patio</td></tr>
+          <tr><td>11:30</td><td>Interactive activities to connect and get to know each other</td><td>School gym</td></tr>
+          <tr><td>12:30</td><td>School Tour for Group 1</td><td>School</td></tr>
+          <tr><td>13:25</td><td>Lunch Break</td><td>School Canteen</td></tr>
+          <tr><td>14:30</td><td>School Tour Group 2</td><td>School</td></tr>
+          <tr><td>15:30</td><td>Interactive activities to connect and get to know each other</td><td>School gym</td></tr>
+          <tr><td>16:30</td><td>Students head home with their hosts</td><td>School gym</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
-<div class="text-center">
-  <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
-</div>  
+
+  <div class="text-center">
+    <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
+  </div>
 </body>
 </html>
