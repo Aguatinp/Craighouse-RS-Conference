@@ -2,52 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 7: Environmentalism</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Day 7 – Environmentalism</title>
   <style>
-    .fixed-bottom-button {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      font-family: Arial, sans-serif;
+      position: relative;
     }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 2rem 2rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-placeholder {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 70px;
+      height: 70px;
+      background-color: #ccc;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #002b64;
+      margin-bottom: 0.2rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #002b64;
+      margin-bottom: 0.3rem;
+    }
+
+    .theme {
+      font-style: italic;
+      color: #002b64;
+      margin-bottom: 2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      margin-bottom: 2rem;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 0.5rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    .reminder-box {
+      background-color: #eef1f6;
+      padding: 1rem;
+      border-left: 6px solid #556;
+    }
+
+    .reminder-title {
+      font-weight: bold;
+      display: inline-block;
+      background-color: #ccc;
+      padding: 0.3rem 0.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .reminder-list {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .background-fox-placeholder {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(180, 180, 180, 0.07);
+      z-index: 0;
+    }
+
+    .left-border {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 100%;
+      background-color: #fdce55;
+      z-index: -1;
+    }
+  </style>
+  <style>.fixed-bottom-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fdce55;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fixed-bottom-button:hover {
+    background-color: #bd9a41; /* un poco más oscuro al pasar el mouse */
+  }
   </style>
 </head>
 <body>
-  <div class="container mt-4">
-    <h1 class="text-center">Day 7 – April 8: Environmentalism</h1>
-    <div class="table-responsive">
-      <table class="table table-bordered">
-        <thead class="table-dark">
-          <tr><th>Time</th><th>Activity</th><th>Venue</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>07:30</td><td>Delegate transfer from hotel to school</td><td>Hotel Petra</td></tr>
-          <tr><td>08:20</td><td>Students and delegates arrive at school</td><td>Fields</td></tr>
-          <tr><td>08:30</td><td>Reception</td><td>Craighouse School Gym</td></tr>
-          <tr><td>09:00</td><td>Environmental session begins (speaker TBD)</td><td>Craighouse School Gym</td></tr>
-          <tr><td>10:00</td><td>Bus departure to Ecoterra</td><td>Fields</td></tr>
-          <tr><td>11:00</td><td>Arrival at Ecoterra</td><td>Ecoterra</td></tr>
-          <tr><td>11:15</td><td>Reception at Ecoterra</td><td>Ecoterra</td></tr>
-          <tr><td>11:30</td><td>Group 1 reforests / Group 2 tours</td><td>Ecoterra</td></tr>
-          <tr><td>12:30</td><td>Packed lunch</td><td>Ecoterra</td></tr>
-          <tr><td>13:45</td><td>Group 1 tours / Group 2 reforests</td><td>Ecoterra</td></tr>
-          <tr><td>14:30</td><td>Bus returns to Craighouse</td><td>Ecoterra</td></tr>
-          <tr><td>15:30</td><td>Arrival at Craighouse</td><td>Fields</td></tr>
-          <tr><td>16:20</td><td>Bird/insect house making (barazas)</td><td>Visual Arts workshops / terraces</td></tr>
-          <tr><td>17:00</td><td>Informative Meeting: Closing Party + Ceremony</td><td>School</td></tr>
-          <tr><td>17:15</td><td>Students go home to prepare</td><td>—</td></tr>
-          <tr><td>19:00</td><td>Closing party (formal – no backpacks, bring mask)</td><td>Main entrance / School dining hall</td></tr>
-          <tr><td>22:00</td><td>Students return home with hosts</td><td>Main entrance</td></tr>
-          <tr><td>22:00</td><td>Delegates transfer to hotel</td><td>Main entrance</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="text-center">
-      <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
+  <div class="left-border"></div>
+
+  <div class="container">
+    <img src="ConferenceLogo.jpg" alt="RS Logo" class="logo-placeholder">
+
+    <h1 class="title">DAY 7<br>ENVIRONMENTALISM</h1>
+    <p class="subtitle">TUESDAY, APRIL 8TH</p>
+    <p class="theme">Theme: Lead with responsibility</p>
+
+    <div class="background-fox-placeholder"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Activity</th>
+          <th>Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>07:30</td><td>Delegate transfer to school</td><td>Gym area</td></tr>
+        <tr><td>08:20</td><td>Students arrival to school</td><td>Gym area</td></tr>
+        <tr><td>09:00</td><td>Speaker: Gonzalo Muñoz</td><td>School gym</td></tr>
+        <tr><td>10:00</td><td>Bus departure to Ecoterra</td><td>Gym area</td></tr>
+        <tr><td>11:00</td><td>Arrival at Ecoterra</td><td>Ecoterra, Paine</td></tr>
+        <tr><td>11:30</td><td>Group 1: Departs to reforest<br>Group 2: Departs to tour</td><td>Ecoterra, Paine</td></tr>
+        <tr><td>12:30</td><td>Packed lunch</td><td>Ecoterra, Paine</td></tr>
+        <tr><td>13:45</td><td>Group 1: Departs to tour<br>Group 2: Departs to reforest</td><td>Ecoterra, Paine</td></tr>
+        <tr><td>15:00</td><td>Bus heads back to Craighouse School</td><td>Ecoterra, Paine</td></tr>
+        <tr><td>16:00</td><td>Arrival at Craighouse School</td><td>Gym area</td></tr>
+        <tr><td>16:20</td><td>Bird/insect houses (baraza groups)</td><td>Visual Arts terraces</td></tr>
+        <tr><td>17:00</td><td>End of activities, students head home with their hosts</td><td>Hockey courts</td></tr>
+        <tr><td>19:00</td><td>Masquerade ball</td><td>School canteen</td></tr>
+        <tr><td>23:00</td><td>End of Masquerade ball</td><td>School canteen</td></tr>
+        <tr><td>23:10</td><td>Delegates depart - transfer to the hotel</td><td>Main entrance</td></tr>
+      </tbody>
+    </table>
+
+    <div class="reminder-box">
+      <div class="reminder-title">DON'T FORGET</div>
+      <ul class="reminder-list">
+        <li>Hat or cap</li>
+        <li>Trekking shoes</li>
+        <li>Work gloves</li>
+        <li>Sunglasses</li>
+        <li>Backpack</li>
+        <li>Sunscreen</li>
+        <li>Bottle of water</li>
+        <li>Snacks</li>
+      </ul>
     </div>
   </div>
+  <div class="text-center">
+    <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
+  </div>  
 </body>
 </html>

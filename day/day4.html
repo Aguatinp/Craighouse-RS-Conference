@@ -2,47 +2,195 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 4: Service</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Day 4 – Service</title>
   <style>
-    .fixed-bottom-button {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      font-family: Arial, sans-serif;
+      position: relative;
     }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 2rem 2rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-placeholder {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 70px;
+      height: 70px;
+      background-color: #ccc;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #002b64;
+      margin-bottom: 0.2rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #002b64;
+      margin-bottom: 0.3rem;
+    }
+
+    .theme {
+      font-style: italic;
+      color: #002b64;
+      margin-bottom: 2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    .reminder-box {
+      margin-top: 2rem;
+      background-color: #eef1f6;
+      padding: 1rem;
+      border-left: 6px solid #556;
+    }
+
+    .reminder-title {
+      font-weight: bold;
+      display: inline-block;
+      background-color: #ccc;
+      padding: 0.3rem 0.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .reminder-image {
+      width: 60px;
+      height: 60px;
+      background-color: #ccc;
+      margin-bottom: 0.5rem;
+    }
+
+    .reminder-list {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .background-placeholder {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(180, 180, 180, 0.08);
+      z-index: 0;
+    }
+
+    .left-border {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 100%;
+      background-color: #ac8bc5;
+      z-index: -1;
+    }
+  </style>
+   <style>.fixed-bottom-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ac8bc5;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fixed-bottom-button:hover {
+    background-color: #685577; /* un poco más oscuro al pasar el mouse */
+  }
   </style>
 </head>
 <body>
-  <div class="container mt-4">
-    <h1 class="text-center">Day 4 – April 5: Service</h1>
-    <div class="table-responsive">
-      <table class="table table-bordered">
-        <thead class="table-dark">
-          <tr><th>Time</th><th>Activity</th><th>Venue</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>7:30</td><td>Delegate transfer to school</td><td>Fields</td></tr>
-          <tr><td>8:15</td><td>Students arrival to school</td><td>Fields</td></tr>
-          <tr><td>8:20</td><td>Welcome snack</td><td>School gym</td></tr>
-          <tr><td>8:45</td><td>Conference “Adventure for life”</td><td>School gym</td></tr>
-          <tr><td>10:00</td><td>Bus departure: Bus 1 to Lat 90, Bus 2 to Río Maipo</td><td>Hockey courts</td></tr>
-          <tr><td>11:30 - 12:00</td><td>Bus 1 arrives at Latitud 90 / Bus 2 arrives at Río Maipo</td><td>Latitud 90 / Cajón del Maipo</td></tr>
-          <tr><td>12:00 - 13:00</td><td>Activities start: zipline, rock climbing / Rafting</td><td>Latitud 90 / Cajón del Maipo</td></tr>
-          <tr><td>13:00 - 14:00</td><td>Lunch box</td><td>Both venues</td></tr>
-          <tr><td>15:30</td><td>Bus return to Craighouse School</td><td>—</td></tr>
-          <tr><td>17:30</td><td>Arrival at school and welcome snack</td><td>School gym</td></tr>
-          <tr><td>17:40</td><td>Baraza groups session</td><td>School gym</td></tr>
-          <tr><td>18:15</td><td>Informative Meeting for Environmentalism Day</td><td>School gym</td></tr>
-          <tr><td>18:30</td><td>Students head home with their hosts</td><td>Fields / Quincho</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="text-center">
-      <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
+  <div class="left-border"></div>
+
+  <div class="container">
+    <img src="ConferenceLogo.jpg" alt="RS Logo" class="logo-placeholder">
+
+    <h1 class="title">DAY 4<br>SERVICE</h1>
+    <p class="subtitle">SATURDAY, APRIL 5TH</p>
+    <p class="theme">Theme: Leadership through action</p>
+
+    <div class="background-placeholder"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Activity</th>
+          <th>Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>7:50</td><td>Delegate transfer to school</td><td>Main entrance</td></tr>
+        <tr><td>8:20</td><td>Students arrival to school</td><td>Main entrance</td></tr>
+        <tr><td>8:20</td><td>Bus allocation</td><td>Main entrance</td></tr>
+        <tr><td>8:30</td><td>Start Route to Valparaíso</td><td>Valparaíso</td></tr>
+        <tr><td>10:30</td><td>Arrival to Valparaíso</td><td>Valparaíso</td></tr>
+        <tr><td>10:40</td><td>Group distribution</td><td>Valparaíso</td></tr>
+        <tr><td>13:00</td><td>Community Lunch Preparation</td><td>Valparaíso</td></tr>
+        <tr><td>14:30</td><td>Lunch</td><td>Valparaíso</td></tr>
+        <tr><td>15:00</td><td>Finish baraza work</td><td>Valparaíso</td></tr>
+        <tr><td>17:00</td><td>Baraza Groups</td><td>Valparaíso</td></tr>
+        <tr><td>18:00</td><td>Visit Turri cafe</td><td>Valparaíso</td></tr>
+        <tr><td>19:00</td><td>Start Route back to Craighouse School</td><td>Valparaíso</td></tr>
+        <tr><td>21:30</td><td>Students head home with their hosts / Delegate transfer to hotel</td><td>Fields</td></tr>
+      </tbody>
+    </table>
+
+    <div class="reminder-box">
+      <div class="reminder-title">DON'T FORGET</div>
+      <div class="reminder-image"></div>
+      <ul class="reminder-list">
+        <li>Hat or cap</li>
+        <li>Trekking shoes</li>
+        <li>Clothes that can get dirty</li>
+        <li>Work gloves</li>
+        <li>Backpack</li>
+        <li>Sunglasses</li>
+        <li>Sunscreen</li>
+        <li>Bottle of water</li>
+        <li>Snacks</li>
+      </ul>
     </div>
   </div>
+  <div class="text-center">
+    <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
+  </div>  
 </body>
 </html>
+

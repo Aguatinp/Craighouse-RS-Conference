@@ -1,48 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 5 Schedule - Family Day</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
-    <style>
-        .fixed-bottom-button {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000; /* Ensures it's above other elements */
-        }
+  <meta charset="UTF-8">
+  <title>Day 5 – Family Day</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
 
-        /* Center the image horizontally in the page */
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%; /* Makes sure it takes up the full height */
-            margin-top: 20px; /* Adds some spacing from top */
-        }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 2rem 2rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
 
-        /* Ensures image scales and remains centered */
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    .logo-placeholder {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 70px;
+      height: 70px;
+      background-color: #ccc;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #002b64;
+      margin-bottom: 0.2rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #002b64;
+      margin-bottom: 0.3rem;
+    }
+
+    .theme {
+      font-style: italic;
+      color: #002b64;
+      margin-bottom: 2rem;
+    }
+
+    .description {
+      font-size: 1.05rem;
+      color: #002b64;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .illustration-placeholder {
+      width: 250px;
+      height: 250px;
+      background-color: #fceccc;
+      margin: 0 auto;
+    }
+
+    .left-border {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 100%;
+      background-color: #0b2650;
+      z-index: -1;
+    }
+  </style>
+   <style>.fixed-bottom-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0b2650;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fixed-bottom-button:hover {
+    background-color: #06152c; /* un poco más oscuro al pasar el mouse */
+  }
+  </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h2 class="text-center">Day 5: Family Day</h2>
-        <div class="text-center">
-            <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
-        </div>    
-    </div>
-    
-    <!-- Image Container with Flexbox to Center -->
-    <div class="image-container">
-        <img src="CasaDay5.png" alt="Descripción" class="img-fluid">
-    </div>
+  <div class="left-border"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <div class="container">
+    <img src="ConferenceLogo.jpg" alt="RS Logo" class="logo-placeholder">
+
+    <h1 class="title">DAY 5<br>FAMILY DAY</h1>
+    <p class="subtitle">SUNDAY, APRIL 6</p>
+    <p class="theme">Theme: Cultural change</p>
+
+    <p class="description">
+      Students will spend the day with host families, exploring local life and culture  
+      while adults will enjoy a relaxing activity and have time to connect.
+    </p>
+
+    <div class="illustration-placeholder"></div>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
+  </div>  
 </body>
 </html>
