@@ -6,30 +6,6 @@
     <title>Interactive Pollution Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('fondoceleste.jpg'); /* <- Cambia esta URL por la imagen de fondo que desees */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0); /* Fondo semi-transparente para legibilidad */
-            margin: 0;
-        }
-
-        #map {
-            width: 100%;
-            height: 600px;
-        }
-    </style>
     <script>
         function initMap() {
             const locations = [
@@ -68,6 +44,6 @@
 </head>
 <body onload="initMap()">
     <h1>Interactive Pollution Map</h1>
-    <div id="map"></div>
+    <div id="map" style="width: 100%; height: 600px;"></div>
 </body>
 </html>
