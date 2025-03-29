@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Day 8 – Closure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -40,6 +41,10 @@
       font-size: 1.2rem;
       color: #002b64;
       margin-bottom: 0.3rem;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
     }
 
     table {
@@ -89,28 +94,47 @@
       background-color: #b52833;
       z-index: -1;
     }
-  </style>
-  <style>.fixed-bottom-button {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #b52833;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    z-index: 9999;
-    transition: background-color 0.3s ease;
-  }
-  
-  .fixed-bottom-button:hover {
-    background-color: #741921; /* un poco más oscuro al pasar el mouse */
-  }
+
+    .fixed-bottom-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #b52833;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+    }
+
+    .fixed-bottom-button:hover {
+      background-color: #741921;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem 1rem 2rem 3.5rem;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -121,19 +145,21 @@
     <h1 class="title">DAY 8<br>CLOSURE</h1>
     <p class="subtitle">WEDNESDAY, APRIL 9TH</p>
 
-    <table>
-      <thead>
-        <tr><th>Time</th><th>Activity</th><th>Venue</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>07:50</td><td>Delegates transfer from hotel to school</td><td>Gym area</td></tr>
-        <tr><td>08:20</td><td>Students and delegates arrive to school</td><td>Gym area</td></tr>
-        <tr><td>08:30</td><td>Students and delegates reception</td><td>School Gym</td></tr>
-        <tr><td>08:40</td><td>Closure ceremony starts</td><td>School Gym</td></tr>
-        <tr><td>09:30</td><td>Closure ceremony ends</td><td>School Gym</td></tr>
-        <tr><td>10:00</td><td>First shift to the airport begins</td><td>Gym area</td></tr>
-      </tbody>
-    </table>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Time</th><th>Activity</th><th>Venue</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>07:50</td><td>Delegates transfer from hotel to school</td><td>Gym area</td></tr>
+          <tr><td>08:20</td><td>Students and delegates arrive to school</td><td>Gym area</td></tr>
+          <tr><td>08:30</td><td>Students and delegates reception</td><td>School Gym</td></tr>
+          <tr><td>08:40</td><td>Closure ceremony starts</td><td>School Gym</td></tr>
+          <tr><td>09:30</td><td>Closure ceremony ends</td><td>School Gym</td></tr>
+          <tr><td>10:00</td><td>First shift to the airport begins</td><td>Gym area</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="reminder-box">
       <div class="reminder-title">DON'T FORGET</div>
@@ -142,6 +168,7 @@
       </p>
     </div>
   </div>
+
   <div class="text-center">
     <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
   </div>  

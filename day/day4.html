@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Day 4 – Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -48,6 +49,10 @@
       margin-bottom: 2rem;
     }
 
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -75,7 +80,7 @@
     .reminder-title {
       font-weight: bold;
       display: inline-block;
-      background-color: #ccc;
+      background-color: #cccccc00;
       padding: 0.3rem 0.6rem;
       margin-bottom: 0.5rem;
     }
@@ -111,28 +116,47 @@
       background-color: #ac8bc5;
       z-index: -1;
     }
-  </style>
-   <style>.fixed-bottom-button {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ac8bc5;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    z-index: 9999;
-    transition: background-color 0.3s ease;
-  }
-  
-  .fixed-bottom-button:hover {
-    background-color: #685577; /* un poco más oscuro al pasar el mouse */
-  }
+
+    .fixed-bottom-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ac8bc5;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+    }
+
+    .fixed-bottom-button:hover {
+      background-color: #685577;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem 1rem 2rem 3.5rem;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -147,50 +171,54 @@
 
     <div class="background-placeholder"></div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Activity</th>
-          <th>Venue</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>7:50</td><td>Delegate transfer to school</td><td>Main entrance</td></tr>
-        <tr><td>8:20</td><td>Students arrival to school</td><td>Main entrance</td></tr>
-        <tr><td>8:20</td><td>Bus allocation</td><td>Main entrance</td></tr>
-        <tr><td>8:30</td><td>Start Route to Valparaíso</td><td>Valparaíso</td></tr>
-        <tr><td>10:30</td><td>Arrival to Valparaíso</td><td>Valparaíso</td></tr>
-        <tr><td>10:40</td><td>Group distribution</td><td>Valparaíso</td></tr>
-        <tr><td>13:00</td><td>Community Lunch Preparation</td><td>Valparaíso</td></tr>
-        <tr><td>14:30</td><td>Lunch</td><td>Valparaíso</td></tr>
-        <tr><td>15:00</td><td>Finish baraza work</td><td>Valparaíso</td></tr>
-        <tr><td>17:00</td><td>Baraza Groups</td><td>Valparaíso</td></tr>
-        <tr><td>18:00</td><td>Visit Turri cafe</td><td>Valparaíso</td></tr>
-        <tr><td>19:00</td><td>Start Route back to Craighouse School</td><td>Valparaíso</td></tr>
-        <tr><td>21:30</td><td>Students head home with their hosts / Delegate transfer to hotel</td><td>Fields</td></tr>
-      </tbody>
-    </table>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>7:50</td><td>Delegate transfer to school</td><td>Main entrance</td></tr>
+          <tr><td>8:20</td><td>Students arrival to school</td><td>Main entrance</td></tr>
+          <tr><td>8:20</td><td>Bus allocation</td><td>Main entrance</td></tr>
+          <tr><td>8:30</td><td>Start Route to Valparaíso</td><td>Valparaíso</td></tr>
+          <tr><td>10:30</td><td>Arrival to Valparaíso</td><td>Valparaíso</td></tr>
+          <tr><td>10:40</td><td>Group distribution</td><td>Valparaíso</td></tr>
+          <tr><td>13:00</td><td>Community Lunch Preparation</td><td>Valparaíso</td></tr>
+          <tr><td>14:30</td><td>Lunch</td><td>Valparaíso</td></tr>
+          <tr><td>15:00</td><td>Finish baraza work</td><td>Valparaíso</td></tr>
+          <tr><td>17:00</td><td>Baraza Groups</td><td>Valparaíso</td></tr>
+          <tr><td>18:00</td><td>Visit Turri cafe</td><td>Valparaíso</td></tr>
+          <tr><td>19:00</td><td>Start Route back to Craighouse School</td><td>Valparaíso</td></tr>
+          <tr><td>21:30</td><td>Students head home with their hosts / Delegate transfer to hotel</td><td>Fields</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="reminder-box">
       <div class="reminder-title">DON'T FORGET</div>
-      <div class="reminder-image"></div>
-      <ul class="reminder-list">
-        <li>Hat or cap</li>
-        <li>Trekking shoes</li>
-        <li>Clothes that can get dirty</li>
-        <li>Work gloves</li>
-        <li>Backpack</li>
-        <li>Sunglasses</li>
-        <li>Sunscreen</li>
-        <li>Bottle of water</li>
-        <li>Snacks</li>
-      </ul>
+      <div style="display: flex; align-items: start; gap: 1rem;">
+        <img src="gloves.png" alt="Reminder Icon" style="width: 80px; height: auto; border-radius: 4px;">
+        <ul class="reminder-list" style="all: unset; list-style: disc; padding-left: 1.2rem; margin: 0; font-size: 1rem; color: #002b64;">
+          <li>Hat or cap</li>
+          <li>Trekking shoes</li>
+          <li>Clothes that can get dirty</li>
+          <li>Work gloves</li>
+          <li>Backpack</li>
+          <li>Sunglasses</li>
+          <li>Sunscreen</li>
+          <li>Bottle of water</li>
+          <li>Snacks</li>
+        </ul>
+      </div>
     </div>
-  </div>
+    
+
   <div class="text-center">
     <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
-  </div>  
+  </div>
 </body>
 </html>
-

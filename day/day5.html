@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Day 5 – Family Day</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -55,11 +56,14 @@
       line-height: 1.6;
     }
 
-    .illustration-placeholder {
-      width: 250px;
-      height: 250px;
-      background-color: #fceccc;
-      margin: 0 auto;
+    .illustration-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .illustration-container img {
+      max-width: 280px;
+      height: auto;
     }
 
     .left-border {
@@ -71,28 +75,51 @@
       background-color: #0b2650;
       z-index: -1;
     }
-  </style>
-   <style>.fixed-bottom-button {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #0b2650;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    z-index: 9999;
-    transition: background-color 0.3s ease;
-  }
-  
-  .fixed-bottom-button:hover {
-    background-color: #06152c; /* un poco más oscuro al pasar el mouse */
-  }
+
+    .fixed-bottom-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #0b2650;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+    }
+
+    .fixed-bottom-button:hover {
+      background-color: #06152c;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem 1rem 2rem 3.5rem;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+      }
+
+      .illustration-container img {
+        max-width: 180px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -110,10 +137,13 @@
       while adults will enjoy a relaxing activity and have time to connect.
     </p>
 
-    <div class="illustration-placeholder"></div>
+    <div class="illustration-container">
+      <img src="handshearts.png" alt="Family Day Illustration">
+    </div>
   </div>
+
   <div class="text-center">
     <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
-  </div>  
+  </div>
 </body>
 </html>

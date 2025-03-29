@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Day 3 – Democracy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -48,6 +49,10 @@
       margin-bottom: 2rem;
     }
 
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -75,7 +80,7 @@
     .reminder-title {
       font-weight: bold;
       display: inline-block;
-      background-color: #ccc;
+      background-color: #cccccc00;
       padding: 0.3rem 0.6rem;
       margin-bottom: 0.5rem;
     }
@@ -111,33 +116,51 @@
       background-color: #cf6342;
       z-index: -1;
     }
-  </style>
-   <style>.fixed-bottom-button {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #cf6342;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    z-index: 9999;
-    transition: background-color 0.3s ease;
-  }
-  
-  .fixed-bottom-button:hover {
-    background-color: #753926; /* un poco más oscuro al pasar el mouse */
-  }
+
+    .fixed-bottom-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #cf6342;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+    }
+
+    .fixed-bottom-button:hover {
+      background-color: #753926;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem 1rem 2rem 3.5rem;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="left-border"></div>
-
   <div class="container">
     <img src="ConferenceLogo.jpg" alt="RS Logo" class="logo-placeholder">
 
@@ -147,50 +170,55 @@
 
     <div class="background-fox-placeholder"></div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Activity</th>
-          <th>Venue</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>7:30</td><td>Delegate transfer to school</td><td>Gym area</td></tr>
-        <tr><td>8:20</td><td>Delegates and students arrive to school</td><td>Gym area</td></tr>
-        <tr><td>8:40</td><td>Conversation session with activists begins (“Voices of change”)</td><td>School gym</td></tr>
-        <tr><td>11:00</td><td>Departure to Museum of Memory and Human Rights / La Moneda Cultural Center</td><td>Gym area</td></tr>
-        <tr><td>12:00</td><td>Arrival at the Museum of Memory and Human Rights / La Moneda Cultural Center</td><td>MMDH / CCLM</td></tr>
-        <tr><td>13:30</td><td>All attendees head by bus to the Fuente Mardoqueo Restaurant</td><td>MMDH / CCLM</td></tr>
-        <tr><td>14:00</td><td>All the attendees meet for lunch at the Fuente Mardoqueo</td><td>Fuente Mardoqueo Restaurant</td></tr>
-        <tr><td>15:00</td><td>The group is divided in two once again to exchange the experience</td><td>Fuente Mardoqueo Restaurant</td></tr>
-        <tr><td>15:30</td><td>Arrival at the Museum of Memory and Human Rights / La Moneda Cultural Center</td><td>CCLM / MMDH</td></tr>
-        <tr><td>17:00</td><td>Both halves of the attendees head by bus to Craighouse School</td><td>CCLM / MMDH</td></tr>
-        <tr><td>18:00</td><td>Arrival of the bus at Craighouse School</td><td>Gym area</td></tr>
-        <tr><td>18:15</td><td>Informative meeting for Service day</td><td>Gym area</td></tr>
-        <tr><td>18:20</td><td>Students return to their homes with their hosts</td><td>Gym area</td></tr>
-        <tr><td>18:30</td><td>Delegates transfer back to hotel</td><td>Gym area</td></tr>
-        <tr><td>19:40</td><td>Bus transfer of delegates to the restaurant</td><td>Hotel Reception</td></tr>
-        <tr><td>20:00</td><td>Dinner for delegates at Doña Tina Restaurant</td><td>Doña Tina Restaurant</td></tr>
-        <tr><td>21:30</td><td>Delegates transfer back to hotel</td><td>Doña Tina Restaurant / Hotel</td></tr>
-      </tbody>
-    </table>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>7:30</td><td>Delegate transfer to school</td><td>Gym area</td></tr>
+          <tr><td>8:20</td><td>Delegates and students arrive to school</td><td>Gym area</td></tr>
+          <tr><td>8:40</td><td>Conversation session with activists begins (“Voices of change”)</td><td>School gym</td></tr>
+          <tr><td>11:00</td><td>Departure to Museum of Memory and Human Rights / La Moneda Cultural Center</td><td>Gym area</td></tr>
+          <tr><td>12:00</td><td>Arrival at the Museum of Memory and Human Rights / La Moneda Cultural Center</td><td>MMDH / CCLM</td></tr>
+          <tr><td>13:30</td><td>All attendees head by bus to the Fuente Mardoqueo Restaurant</td><td>MMDH / CCLM</td></tr>
+          <tr><td>14:00</td><td>All the attendees meet for lunch at the Fuente Mardoqueo</td><td>Fuente Mardoqueo Restaurant</td></tr>
+          <tr><td>15:00</td><td>The group is divided in two once again to exchange the experience</td><td>Fuente Mardoqueo Restaurant</td></tr>
+          <tr><td>15:30</td><td>Arrival at the Museum of Memory and Human Rights / La Moneda Cultural Center</td><td>CCLM / MMDH</td></tr>
+          <tr><td>17:00</td><td>Both halves of the attendees head by bus to Craighouse School</td><td>CCLM / MMDH</td></tr>
+          <tr><td>18:00</td><td>Arrival of the bus at Craighouse School</td><td>Gym area</td></tr>
+          <tr><td>18:15</td><td>Informative meeting for Service day</td><td>Gym area</td></tr>
+          <tr><td>18:20</td><td>Students return to their homes with their hosts</td><td>Gym area</td></tr>
+          <tr><td>18:30</td><td>Delegates transfer back to hotel</td><td>Gym area</td></tr>
+          <tr><td>19:40</td><td>Bus transfer of delegates to the restaurant</td><td>Hotel Reception</td></tr>
+          <tr><td>20:00</td><td>Dinner for delegates at Doña Tina Restaurant</td><td>Doña Tina Restaurant</td></tr>
+          <tr><td>21:30</td><td>Delegates transfer back to hotel</td><td>Doña Tina Restaurant / Hotel</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="reminder-box">
       <div class="reminder-title">DON'T FORGET</div>
-      <div class="reminder-image"></div>
-      <ul class="reminder-list">
-        <li>Hat or cap</li>
-        <li>Backpack</li>
-        <li>Bottle of water</li>
-        <li>Sunscreen</li>
-        <li>Sunglasses</li>
-        <li>Snacks</li>
-      </ul>
+      <div style="display: flex; align-items: start; gap: 1rem;">
+        <img src="museum.png" alt="Reminder Icon" style="width: 80px; height: auto; border-radius: 4px;">
+        <ul style="all: unset; list-style: disc; padding-left: 1.2rem; margin: 0; font-size: 1rem; color: #002b64;">
+          <li>Hat or cap</li>
+          <li>Backpack</li>
+          <li>Bottle of water</li>
+          <li>Sunscreen</li>
+          <li>Sunglasses</li>
+          <li>Snacks</li>
+        </ul>
+      </div>
     </div>
-  </div>
+    
+
   <div class="text-center">
     <button class="btn btn-secondary fixed-bottom-button" onclick="window.history.back()">Back</button>
-  </div>  
+  </div>
 </body>
 </html>
