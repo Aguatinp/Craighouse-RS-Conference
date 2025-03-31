@@ -32,56 +32,65 @@
           mapTypeId: 'satellite'
         });
 
-        userMarker = new google.maps.Marker({
-          position: initialPos,
-          map: map,
-          title: "Tu ubicación",
-          icon: {
-            url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-          }
-        });
-
-        if (navigator.geolocation) {
-          navigator.geolocation.watchPosition(
-            (position) => {
-              const pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-              };
-              userMarker.setPosition(pos);
-              map.setCenter(pos);
-            },
-            (error) => {
-              alert("Error al obtener la ubicación: " + error.message);
-            }
-          );
-        } else {
-          alert("Tu navegador no soporta geolocalización.");
-        }
-
         // 🔽 Marcadores personalizados con InfoWindows
-        const locations = [
-          {
-            position: { lat: -33.317778, lng: -70.576389 },
-            title: "Gym",
-            info: "Meeting point"
-          },
-          {
-            position: { lat: -33.318056, lng: -70.576944 },
-            title: "P6",
-            info: ""
-          },
-          {
-            position: { lat: -33.318611, lng: -70.5775 },
-            title: "P7",
-            info: ""
-          },
-          {
-            position: { lat: -33.319444, lng: -70.578333 },
-            title: "Dining hall",
-            info: ""
-          }
-        ];
+const locations = [
+{
+  position: { lat: -33.317944, lng: -70.576583 },
+  title: "Sports Hall",
+  info: "Meeting Point"
+},
+  {
+    position: { lat: -33.318056, lng: -70.576944 },
+    title: "P6",
+    info: ""
+  },
+  {
+  position: { lat: -33.319766017380246, lng: -70.57846945980478 },
+  title: "Dining Hall",
+  info: ""
+},
+ {
+    position: { lat: -33.38943039117317, lng: -70.79446675270768 },
+    title: "Aeropuerto",
+    info: ""
+  },
+  {
+    position: { lat: -33.439512251910905, lng: -70.67935391654491 },
+    title: "Museo de Historia y Derechos Humanos",
+    info: ""
+  },
+  {
+    position: { lat: -33.443570724534716, lng: -70.65385001839257 },
+    title: "Centro Cultural La Moneda",
+    info: ""
+  },
+  {
+    position: { lat: -33.438625093106346, lng: -70.67423533386616 },
+    title: "Restaurante Mardoqueo",
+    info: ""
+  },
+  {
+    position: { lat: -33.046687062818236, lng: -71.61394349488035 },
+    title: "Valparaíso",
+    info: ""
+  },
+  {
+    position: { lat: -33.37054087084604, lng: -70.40004377189177 },
+    title: "Centro de desafíos Latitud 90",
+    info: ""
+  },
+  {
+    position: { lat: -33.65684905911468, lng: -70.07653487011245 },
+    title: "Cajón del Maipo",
+    info: ""
+  },
+  {
+    position: { lat: -33.804666931000625, lng: -70.75516809583395 },
+    title: "Ecoterra Paine",
+    info: ""
+  }
+];
+
 
         locations.forEach(loc => {
           const marker = new google.maps.Marker({
