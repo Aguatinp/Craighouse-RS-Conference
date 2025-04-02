@@ -3,13 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baraza 2 – Huemul / South Andean Deer</title>
+  <title>Baraza 2 – Huemul</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('baraza2.jpg'); /* asegúrate que la ruta sea correcta */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(8px); /* Ajusta el nivel de difuminado aquí */
+      z-index: -1;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
-<body class="bg-light text-dark">
+<body class="bg-light text-light">
   <div class="container py-5">
     <h1 class="text-center mb-4">Baraza 2 – Huemul / South Andean Deer</h1>
 

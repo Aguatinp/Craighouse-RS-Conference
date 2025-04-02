@@ -3,47 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baraza 1 – Zorro / Fox</title>
+  <title>Baraza 1 – Zorro</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('baraza1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(8px);
+      z-index: -1;
+      transform: scale(1.1);
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+  </style>
 </head>
-<body class="bg-light text-dark">
+<body class="text-light">
   <div class="container py-5">
-    <h1 class="text-center mb-4">Baraza 1 – Zorro / Fox</h1>
+    <h1 class="text-center mb-5">Baraza 1 – Zorro</h1>
 
-    <h4>Leaders:</h4>
-    <ul>
-      <li>Agustina Garcia-M</li>
-      <li>Sebastian Hincapie</li>
-      <li>Emilia Abarca</li>
-      <li>Raimundo Arend</li>
-      <li>Matilde Gerszencvich</li>
-    </ul>
+    <div class="row g-4">
+      <!-- Leaders -->
+      <div class="col-md-4">
+        <h4>Leaders:</h4>
+        <ul>
+          <li>Emilia Abarca</li>
+          <li>Raimundo Arend</li>
+          <li>Agustina Garcia-M</li>
+          <li>Matilde Gerszencvich</li>
+          <li>Sebastian Hincapie</li>
+        </ul>
+      </div>
 
-    <h4>Facilitators:</h4>
-    <ul>
-      <li>Emily Paul (sc)(can)</li>
-      <li>Craig Bouma (cat)(usa)</li>
-      <li>Ana Ford (sti)(ale)</li>
-    </ul>
+      <!-- Participants -->
+      <div class="col-md-4">
+        <h4>Participants:</h4>
+        <ul>
+          <li>Hannah Abtahi (can)</li>
+          <li>Sanjana Bassi (can)</li>
+          <li>Mira Buckley (per)</li>
+          <li>Arhaan Gupta (Ind)</li>
+          <li>Victoria Hampton (can)</li>
+          <li>Trinidad Letugaye (arg)</li>
+          <li>Samarvir Mamik (Ind)</li>
+          <li>Sophie Moelders (ale)</li>
+          <li>Denis Obreja (rum)</li>
+          <li>Ian Sheshunoff (USA)</li>
+          <li>Brynne Sullivan (USA)</li>
+        </ul>
+      </div>
 
-    <h4>Participants:</h4>
-    <ul>
-      <li>Hannah Abtahi (sc)(can)</li>
-      <li>Samarvir Mamik (viv)(Ind)</li>
-      <li>Mira Buckley (mar)(per)</li>
-      <li>Victoria Hampton (mil)(can)</li>
-      <li>Lesedi Morabe (Pen)(Za)</li>
-      <li>Denis Obreja (par)(rum)</li>
-      <li>Sophie Moelders (sti)(ale)</li>
-      <li>Brynne Sullivan (pal)(USA)</li>
-      <li>Trinidad Letugaye (mic)(arg)</li>
-      <li>Ian Sheshunoff (cat)(USA)</li>
-      <li>Sanjana Bassi (mil)(can)</li>
-      <li>Arhaan Gupta (mod Ind)</li>
-    </ul>
+      <!-- Facilitators -->
+      <div class="col-md-4">
+        <h4>Facilitators:</h4>
+        <ul>
+          <li>Craig Bouma (usa)</li>
+          <li>Ana Ford (ale)</li>
+          <li>Emily Paul (can)</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <script
