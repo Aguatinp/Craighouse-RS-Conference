@@ -91,34 +91,44 @@
     <br><br><br>
     <iframe src="googlemaps.html" width="100%" height="500" style="border:none;"></iframe>
    <div class="d-flex justify-content-center mt-4">
-
-    
     <a href="CO2/CO2.html" class="btn btn-lg custom-co2-btn">My CO₂ Emissions</a>
 </div>  
 
 
     <div class="container">
         <!-- Todo el contenido de tu página aquí -->
-    
-        <div class="text-end p-3" id="credits-footer">
-            <a href="credit.html" class="btn btn-dark btn-sm">Credits</a>
-        </div>
+         <br>
+         <div class="d-flex justify-content-center mt-4">
+            <a href="baraza/baraza.html" class="btn btn-lg custom-baraza-btn">Baraza Groups</a>
+          </div>          
+      <div class="text-end p-3" id="credits-footer">
+        <a href="credit.html" class="btn btn-dark btn-sm">Credits</a>
     </div>
-    <script>
-        document.addEventListener("scroll", function () {
-            let footer = document.getElementById("credits-footer");
-            let scrollPosition = window.scrollY || document.documentElement.scrollTop;
-            let totalHeight = document.documentElement.scrollHeight;
-            let windowHeight = window.innerHeight;
-    
-            // Si el usuario ha bajado más de la mitad de la página, mostrar botón
-            if (scrollPosition > totalHeight - windowHeight - 100) { 
-                footer.classList.add("show-footer");
-            } else {
-                footer.classList.remove("show-footer");
-            }
-        });
-    </script>
-    <br><br><br><br>
+</div>
+<script>
+    document.addEventListener("scroll", function () {
+        let footer = document.getElementById("credits-footer");
+        let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        let totalHeight = document.documentElement.scrollHeight;
+        let windowHeight = window.innerHeight;
+
+        // Si el usuario ha bajado más de la mitad de la página, mostrar botón
+        if (scrollPosition > totalHeight - windowHeight - 100) { 
+            footer.classList.add("show-footer");
+        } else {
+            footer.classList.remove("show-footer");
+        }
+    });
+</script>    
+    <br><br><br>
+    <footer style="background-color: #182E46; color: white; padding: 1.5rem; text-align: center; font-family: Arial, sans-serif;">
+        <hr style="border: 1px solid white; width: 100%; margin-bottom: 1rem;">
+        <p style="color: #e74c3c; font-weight: bold; letter-spacing: 1px; margin: 0;">EMERGENCY CONTACT:</p>
+        <p style="margin: 0.3rem 0 1rem;">María Paz Sauman<br>+56 9 7769 4064</p>
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
+          <img src="img/ConferenceLogo.jpg" alt="Logo 1" style="width: 50px; height: 50px;">
+          <img src="img/roundsquarelogo.jpg" alt="Logo 2" style="width: 50px; height: 50px;">
+        </div>
+      </footer>      
 </body>
 </html>

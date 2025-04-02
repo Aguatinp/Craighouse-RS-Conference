@@ -18,6 +18,7 @@ body {
         border-color: #26699D;
         border-radius: 50px; /* Bordes redondeados */
         color: white;
+        font-weight: bold;
     }
 
     .custom-co2-btn:hover {
@@ -42,7 +43,7 @@ body {
 
     .custom-accordion-btn:not(.collapsed) {
         color: white;
-        background-color: #1f5a89;
+        background-color: #26699D;
         box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
     }
 
@@ -80,3 +81,25 @@ body {
     margin-right: 1rem;
     cursor: pointer;
 }
+
+.custom-width {
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .custom-baraza-btn {
+    background-color: #26699D;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 28px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+  }
+  
+  .custom-baraza-btn:hover {
+    background-color: #1f5a89;
+    color: white;
+  }
+  
