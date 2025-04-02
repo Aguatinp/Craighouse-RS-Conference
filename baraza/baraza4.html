@@ -4,17 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baraza 4 – Pingüino</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-      height: 100vh;
       margin: 0;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
+      background-image: url('baraza4.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
+
     body::before {
       content: "";
       position: fixed;
@@ -22,55 +28,83 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('baraza4.jpg'); /* asegúrate que la ruta sea correcta */
+      background-image: url('baraza4.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      filter: blur(8px); /* Ajusta el nivel de difuminado aquí */
+      filter: blur(8px);
       z-index: -1;
       transform: scale(1.1);
     }
+
+    .container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+
+    .text-light li {
+      text-align: center;
+    }
   </style>
 </head>
-<body class="bg-light text-light">
-  <div class="container py-5">
-    <h1 class="text-center mb-4">Baraza 4 – Pingüino</h1>
+<body class="text-light">
+  <div class="container">
+    <h1 class="mb-5">Baraza 4 – Pingüino</h1>
 
-    <h4>Leaders:</h4>
-    <ul>
-      <li>Martin Sabio</li>
-      <li>Julieta del Favero</li>
-      <li>Benjamin Acuña</li>
-      <li>Jacinta Bauzá</li>
-    </ul>
+    <div class="row justify-content-center g-4 text-center">
+      <!-- Leaders -->
+      <div class="col-md-4">
+        <h4>Leaders:</h4>
+        <ul>
+          <li>Benjamin Acuña</li>
+          <li>Julieta del Favero</li>
+          <li>Jacinta Bauzá</li>
+          <li>Martin Sabio</li>
+        </ul>
+      </div>
 
-    <h4>Facilitators:</h4>
-    <ul>
-      <li>Pamela Chavez (mar)(per)</li>
-      <li>Monica Zofota (par)(rum)</li>
-      <li>Shaliny Dahiya (mo)(In)</li>
-    </ul>
+      <!-- Participants -->
+      <div class="col-md-4">
+        <h4>Participants:</h4>
+        <ul>
+          <li>Adhiraj Joneja (Ind)</li>
+          <li>Isabella Chen (can)</li>
+          <li>Jette Dockhorn (ale)</li>
+          <li>Luana Flores (per)</li>
+          <li>Nika Iverson (USA)</li>
+          <li>Victoria Mandolia (USA)</li>
+          <li>Belle Qu (can)</li>
+          <li>Julieta del Favero (per)</li>
+          <li>Fatima Sattar (can)</li>
+          <li>Zelmira Busto (arg)</li>
+          <li>Zorowar Singh (ind)</li>
+          <li>Sophie Jolivet (can)</li>
+          <li>Alexia Vencea (rum)</li>
+          <li>Tudor Zaharia (rum)</li>
+        </ul>
+      </div>
 
-    <h4>Participants:</h4>
-    <ul>
-      <li>Sophie Jolivet (sc)(can)</li>
-      <li>Zorowar Singh (viv)(ind)</li>
-      <li>Luana Flores (mar)(per)</li>
-      <li>Isabella Chen (mil)(can)</li>
-      <li>Fatima Sattar (mil)(can)</li>
-      <li>Alexia Vencea (par)(rum)</li>
-      <li>Tudor Zaharia (par)(rum)</li>
-      <li>Victoria Mandolia (pal)(USA)</li>
-      <li>Jette Dockhorn (kos)(ale)</li>
-      <li>Zelmira Busto (mic)(arg)</li>
-      <li>Nika Iverson (cat)(USA)</li>
-      <li>Belle Qu (app)(can)</li>
-      <li>Adhiraj Joneja (mod Ind)</li>
-    </ul>
+      <!-- Facilitators -->
+      <div class="col-md-4">
+        <h4>Facilitators:</h4>
+        <ul>
+          <li>Shaliny Dahiya (In)</li>
+          <li>Pamela Chavez (per)</li>
+          <li>Monica Zofota (rum)</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

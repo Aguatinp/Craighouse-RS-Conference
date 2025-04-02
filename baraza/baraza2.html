@@ -4,17 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baraza 2 – Huemul</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-      height: 100vh;
       margin: 0;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
+      background-image: url('baraza2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
+
     body::before {
       content: "";
       position: fixed;
@@ -22,55 +28,82 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('baraza2.jpg'); /* asegúrate que la ruta sea correcta */
+      background-image: url('baraza2.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      filter: blur(8px); /* Ajusta el nivel de difuminado aquí */
+      filter: blur(8px);
       z-index: -1;
       transform: scale(1.1);
     }
+
+    .container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+
+    .text-light li {
+      text-align: center;
+    }
   </style>
 </head>
-<body class="bg-light text-light">
-  <div class="container py-5">
-    <h1 class="text-center mb-4">Baraza 2 – Huemul / South Andean Deer</h1>
+<body class="text-light">
+  <div class="container">
+    <h1 class="mb-5">Baraza 2 – Huemul</h1>
 
-    <h4>Leaders:</h4>
-    <ul>
-      <li>Antonia Araya</li>
-      <li>Iñigo Fernández</li>
-      <li>Trinidad Rivadeneira</li>
-      <li>Agustin Pineda</li>
-      <li>Matilde Amenabar</li>
-    </ul>
+    <div class="row justify-content-center g-4 text-center">
+      <!-- Leaders -->
+      <div class="col-md-4">
+        <h4>Leaders:</h4>
+        <ul>
+          <li>Matilde Amenabar</li>
+          <li>Agustín Pineda</li>
+          <li>Trinidad Rivadeneira</li>
+          <li>Antonia Araya</li>
+          <li>Iñigo Fernández</li>
+        </ul>
+      </div>
 
-    <h4>Facilitators:</h4>
-    <ul>
-      <li>Sarah Dickson (sc)(can)</li>
-      <li>Michael Eisen (pen)(za)</li>
-      <li>Anna Helm (sti)(ale)</li>
-      <li>Simon Beatti (app)(can)</li>
-    </ul>
+      <!-- Participants -->
+      <div class="col-md-4">
+        <h4>Participants:</h4>
+        <ul>
+          <li>Samuel Aguirre (USA)</li>
+          <li>Prisha Balaji (can)</li>
+          <li>Ayanna Das (ind)</li>
+          <li>Kaitlyn Dai (USA)</li>
+          <li>Ivan Frers (arg)</li>
+          <li>Turki Al Haddabi (can)</li>
+          <li>Divya Lala (can)</li>
+          <li>Mark Nayhem (ale)</li>
+          <li>Erica Nunes (Za)</li>
+          <li>Julieta Peschiera (per)</li>
+          <li>Cristian Raihel (rum)</li>
+        </ul>
+      </div>
 
-    <h4>Participants:</h4>
-    <ul>
-      <li>Ayanna Das (viv)(ind)</li>
-      <li>Julieta Peschiera (mar)(per)</li>
-      <li>Prisha Balaji (mil)(can)</li>
-      <li>Divya Lala (mil)(can)</li>
-      <li>Erica Nunes (Pen)(Za)</li>
-      <li>Cristian Raihel (par)(rum)</li>
-      <li>Mark Nayhem (sti)(ale)</li>
-      <li>Samuel Aguirre (pal)(USA)</li>
-      <li>Ivan Frers (mic)(arg)</li>
-      <li>Kaitlyn Dai (cat)(USA)</li>
-      <li>Turki Al Haddabi (app)(can)</li>
-    </ul>
+      <!-- Facilitators -->
+      <div class="col-md-4">
+        <h4>Facilitators:</h4>
+        <ul>
+          <li>Simon Beatti (can)</li>
+          <li>Sarah Dickson (can)</li>
+          <li>Michael Eisen (za)</li>
+          <li>Anna Helm (ale)</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

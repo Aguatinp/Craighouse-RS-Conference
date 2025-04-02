@@ -4,17 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baraza 3 – Guanaco</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-      height: 100vh;
       margin: 0;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
+      background-image: url('baraza3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
+
     body::before {
       content: "";
       position: fixed;
@@ -22,55 +28,82 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('baraza3.jpg'); /* asegúrate que la ruta sea correcta */
+      background-image: url('baraza3.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      filter: blur(8px); /* Ajusta el nivel de difuminado aquí */
+      filter: blur(8px);
       z-index: -1;
       transform: scale(1.1);
     }
+
+    .container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+
+    .text-light li {
+      text-align: center;
+    }
   </style>
 </head>
-<body class="bg-light text-light">
-  <div class="container py-5">
-    <h1 class="text-center mb-4">Baraza 3 – Guanaco</h1>
+<body class="text-light">
+  <div class="container">
+    <h1 class="mb-5">Baraza 3 – Guanaco</h1>
 
-    <h4>Leaders:</h4>
-    <ul>
-      <li>Marcelo Prado</li>
-      <li>Magdalena Garcia</li>
-      <li>Marcela Burger</li>
-      <li>Agustin Vivanco</li>
-      <li>Larisa Cordova</li>
-    </ul>
+    <div class="row justify-content-center g-4 text-center">
+      <!-- Leaders -->
+      <div class="col-md-4">
+        <h4>Leaders:</h4>
+        <ul>
+          <li>Marcela Burger</li>
+          <li>Larisa Cordova</li>
+          <li>Magdalena Garcia</li>
+          <li>Marcelo Prado</li>
+          <li>Agustin Vivanco</li>
+        </ul>
+      </div>
 
-    <h4>Facilitators:</h4>
-    <ul>
-      <li>Dr Nencepreet Kaur (viv)(ind)</li>
-      <li>Micaela Van Rooyen (pen)(za)</li>
-      <li>Tamlyn Pickering (mil)(can)</li>
-    </ul>
+      <!-- Participants -->
+      <div class="col-md-4">
+        <h4>Participants:</h4>
+        <ul>
+          <li>Katherine Barnes (can)</li>
+          <li>Barbu Matricala (rum)</li>
+          <li>Colin Duffy (USA)</li>
+          <li>Fallon Erickson (USA)</li>
+          <li>Reva Khanna (ind)</li>
+          <li>Michelle Li (can)</li>
+          <li>Rares Berhecci (rum)</li>
+          <li>Emma Razuri (per)</li>
+          <li>Sophie Pannell (can)</li>
+          <li>Sarthak Ranganadhan (Ind)</li>
+          <li>Nicolas Tizado (arg)</li>
+          <li>Ben Wertz (ale)</li>
+        </ul>
+      </div>
 
-    <h4>Participants:</h4>
-    <ul>
-      <li>Reva Khanna (viv)(ind)</li>
-      <li>Emma Razuri (mar)(per)</li>
-      <li>Katherine Barnes (mil)(can)</li>
-      <li>Sophie Pannell (mil)(can)</li>
-      <li>Rares Berhecci (par)(rum)</li>
-      <li>Barbu Matricala (par)(rum)</li>
-      <li>Ben Wertz (sti)(ale)</li>
-      <li>Colin Duffy (pal)(USA)</li>
-      <li>Nicolas Tizado (mic)(arg)</li>
-      <li>Fallon Erickson (cat)(USA)</li>
-      <li>Michelle Li (app)(can)</li>
-      <li>Sarthak Ranganadhan (mod Ind)</li>
-    </ul>
+      <!-- Facilitators -->
+      <div class="col-md-4">
+        <h4>Facilitators:</h4>
+        <ul>
+          <li>Dr Nencepreet Kaur (ind)</li>
+          <li>Tamlyn Pickering (can)</li>
+          <li>Micaela Van Rooyen (za)</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
