@@ -91,7 +91,7 @@
                 {name: "Modern School", lat: 28.6305, lon: 77.2206, co2: 9200.0, co2_per_person: 1840.0, espinos: 25.040, espinos_per_person: 5.008, quillayes: 0.502, quillayes_per_person: 0.100}
             ];
 
-            const map = L.map('map').setView([20, 0, 0], 0);
+            const map = L.map('map').setView([20, 0, 0], 1.2);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap contributors'
             }).addTo(map);
